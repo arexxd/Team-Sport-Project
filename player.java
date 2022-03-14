@@ -7,14 +7,9 @@ public abstract class player {
         team = teamName;
         score = 0;
     }
-    public int getScore(){
-        return score;   
-    }
-    public String getName(){
-        return name;
-    }
-    public String getTeam(){
-        return team;
+    public abstract void score();
+    public int getscore(){
+        return score;
     }
     public String toString(){
         String result = "Player " + name;
@@ -26,6 +21,11 @@ public abstract class player {
 class Badminton extends player {
     public Badminton(String playerName, String teamName, int score){
         super name, team;
+    }
+
+    @Override
+    public void score() {
+        if 
     }
     public String 
 }
