@@ -20,12 +20,14 @@ public abstract class player {
 }
 class Badminton extends player {
     public Badminton(String playerName, String teamName, int score){
-        super name, team;
+        this.name;
+        this.team;
+        this.score;
     }
 
     @Override
     public void score() {
-        if 
+        if player.
     }
     public String 
 }
