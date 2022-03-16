@@ -7,7 +7,6 @@ public abstract class player {
         team = teamName;
         score = 0;
     }
-    public abstract void score();
     public int getscore(){
         return score;
     }
@@ -17,17 +16,32 @@ public abstract class player {
         result += "\nScore " + score;
         return result;
     }
+    public abstract player score(player player1, player player2);
 }
 class Badminton extends player {
+    private String name;
+    private String team;
+    private int score;
     public Badminton(String playerName, String teamName, int score){
-        this.name;
-        this.team;
-        this.score;
+        super(playerName, teamName, score));
+        this.name=playerName;
+        this.team=teamName;
+        this.score=score;
     }
 
-    @Override
-    public void score() {
-        if player.
+
+    public player score(Badminton player1, Badminton player2) {
+        Badminton player=new Badminton("they","are",0);
+        if(player1.getScore()>player2.getScore()){
+            return player1;
+        }else if(player1.getScore()<player2.getScore()){
+            return player2;
+        }else{
+            return player;
+        }
     }
-    public String 
+
+    public int getScore(){
+        return score;
+    }
 }
