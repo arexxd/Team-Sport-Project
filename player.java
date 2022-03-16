@@ -23,25 +23,34 @@ class Badminton extends player {
     private String team;
     private int score;
     public Badminton(String playerName, String teamName, int score){
-        super(playerName, teamName, score));
-        this.name=playerName;
-        this.team=teamName;
-        this.score=score;
+        super(playerName, teamName, score);
     }
-
-
-    public player score(Badminton player1, Badminton player2) {
+    public player score(player player1, player player2) {
         Badminton player=new Badminton("they","are",0);
-        if(player1.getScore()>player2.getScore()){
+        if(player1.getscore()>player2.getscore()){
             return player1;
-        }else if(player1.getScore()<player2.getScore()){
+        }else if(player1.getscore()<player2.getscore()){
             return player2;
         }else{
             return player;
         }
     }
-
-    public int getScore(){
-        return score;
+}
+class Tennis extends player {
+    private String name;
+    private String team;
+    private int score;
+    public Tennis(String playerName, String teamName, int score){
+        super(playerName, teamName, score));
+    }
+    public player score(player player1, player player2) {
+        Badminton player=new Badminton("they","are",0);
+        if(player1.getscore()>player2.getscore()){
+            return player1;
+        }else if(player1.getscore()<player2.getscore()){
+            return player2;
+        }else{
+            return player;
+        }
     }
 }
