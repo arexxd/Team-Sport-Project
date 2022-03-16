@@ -16,41 +16,20 @@ public abstract class player {
         result += "\nScore " + score;
         return result;
     }
-    public abstract player score(player player1, player player2);
+    public abstract String score(player player1, player player2);
 }
 class Badminton extends player {
-    private String name;
-    private String team;
-    private int score;
     public Badminton(String playerName, String teamName, int score){
         super(playerName, teamName, score);
     }
-    public player score(player player1, player player2) {
+    public String score(player player1, player player2) {
         Badminton player=new Badminton("they","are",0);
         if(player1.getscore()>player2.getscore()){
-            return player1;
+            return player1.toString();
         }else if(player1.getscore()<player2.getscore()){
-            return player2;
+            return player2.toString();
         }else{
-            return player;
-        }
-    }
-}
-class Tennis extends player {
-    private String name;
-    private String team;
-    private int score;
-    public Tennis(String playerName, String teamName, int score){
-        super(playerName, teamName, score));
-    }
-    public player score(player player1, player player2) {
-        Badminton player=new Badminton("they","are",0);
-        if(player1.getscore()>player2.getscore()){
-            return player1;
-        }else if(player1.getscore()<player2.getscore()){
-            return player2;
-        }else{
-            return player;
+            return player.toString();
         }
     }
 }
