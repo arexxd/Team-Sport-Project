@@ -1,35 +1,38 @@
-public abstract class player {
-    String name, team;
-    int score;
+public abstract class player
+{
+protected String player, team;
+protected int score;
 
-    public player(String playerName, String teamName, int score){
-        name = playerName;
-        team = teamName;
-        score = 0;
-    }
-    public int getscore(){
-        return score;
-    }
-    public String toString(){
-        String result = "Player " + name;
-        result += "\nTeam " + team;
-        result += "\nScore " + score;
-        return result;
-    }
-    public abstract String score(player player1, player player2);
+public player (String playerName, String teamName)
+{
+    player = playerName;
+    team = teamName;
+    score = 0;
 }
-class Badminton extends player {
-    public Badminton(String playerName, String teamName, int score){
-        super(playerName, teamName, score);
+
+public int getScore()
+{
+    return score;
+}
+
+public abstract void score();
+
+public String toString()
+{
+    String result = "Player: " + player;
+    result += "nTeam: " + team;
+    result += "nScore: " + score;
+    return result;
+}
+
+public class Badminton extends player{
+    public Badminton(String playerName, String teamName){
+        super(playerName, teamName);
     }
-    public String score(player player1, player player2) {
-        Badminton player=new Badminton("they","are",0);
-        if(player1.getscore()>player2.getscore()){
-            return player1.toString();
-        }else if(player1.getscore()<player2.getscore()){
-            return player2.toString();
-        }else{
-            return player.toString();
-        }
-    }
+public 
+
+
+}
+
+
 }
